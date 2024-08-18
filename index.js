@@ -1,4 +1,5 @@
 const  { TelegramClient, Api } = require ("telegram");
+const http = require('http')
 const  readline = require("readline");
 let dotenv = require("dotenv")
 dotenv.config()
@@ -103,7 +104,7 @@ const dateString = now.toLocaleString('en-US', options);
     } catch (error) {
       console.error('Error sending message:', error);
     }
-  }, 3600000);
+  }, 360000);
   
 
   console.log("You should now be connected.");
@@ -111,3 +112,9 @@ const dateString = now.toLocaleString('en-US', options);
   await client.sendMessage("me", { message: "Hello!" });
 //   await client.getMe()
 })();
+
+
+let server = http.createServer();
+server.listen(process.env.PORT,()=>{
+  console.log(process.env.PORT)
+})
