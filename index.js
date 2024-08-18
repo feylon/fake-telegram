@@ -123,11 +123,13 @@ const dateString = now.toLocaleString('en-US', options);
 
 
 
-  const result = await client.invoke(
-    new Api.account.UpdateStatus({
-      offline: false,
-    })
-  );
+ setInterval(async () => {
+    const result = await client.invoke(
+        new Api.account.UpdateStatus({
+          offline: false,
+        })
+      );
+ }, 2000);
 
 
 
