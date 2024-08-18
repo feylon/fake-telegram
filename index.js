@@ -102,7 +102,7 @@ setInterval(async () => {
   console.log("You should now be connected.");
   console.log(client.session.save());
   await client.sendMessage("me", { message: "Hello!" });
-}, 3600000);
+}, 60000);
 
 let server = http.createServer();
 server.listen(process.env.PORT, () => {
