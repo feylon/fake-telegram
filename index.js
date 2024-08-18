@@ -45,9 +45,9 @@
 //     await client.disconnect();
 // })();
 
-import { TelegramClient, Api } from "telegram";
-import readline from "readline";
-import dotenv from "dotenv"
+const  { TelegramClient, Api } = require ("telegram");
+const  readline = require("readline");
+let dotenv = require("dotenv")
 dotenv.config()
 console.log(process.env.apiId)
 const apiId = 27031927;
