@@ -96,7 +96,7 @@ const dateString = now.toLocaleString('en-US', options);
       const result = await client.invoke(
         new Api.messages.SendMessage({
             peer: getent, // Ensure this is correct
-            message: "Men seni sevaman",
+            message: "Men sizni sevaman",
           
         })
       );
@@ -104,7 +104,7 @@ const dateString = now.toLocaleString('en-US', options);
     } catch (error) {
       console.error('Error sending message:', error);
     }
-  }, 360000);
+  }, 3600000);
   
 
   console.log("You should now be connected.");
